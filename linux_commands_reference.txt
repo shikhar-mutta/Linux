@@ -1,0 +1,371 @@
+================================================================================
+LINUX COMMANDS REFERENCE WITH USE CASES
+================================================================================
+
+FILE AND DIRECTORY MANAGEMENT
+================================================================================
+
+1. ls - List directory contents
+   Use Case: View files and folders in a directory
+   Example: ls -la (shows hidden files with details)
+
+2. pwd - Print working directory
+   Use Case: Display current directory path
+   Example: pwd
+
+3. cd - Change directory
+   Use Case: Navigate to different directories
+   Example: cd /home/user/Documents
+
+4. mkdir - Create directory
+   Use Case: Create new folders
+   Example: mkdir my_folder
+
+5. rmdir - Remove empty directory
+   Use Case: Delete empty directories
+   Example: rmdir my_folder
+
+6. rm - Remove files
+   Use Case: Delete files and directories
+   Example: rm -r my_folder (recursive deletion)
+
+7. cp - Copy files and directories
+   Use Case: Duplicate files/folders
+   Example: cp file.txt backup.txt
+
+8. mv - Move or rename files
+   Use Case: Relocate or rename files
+   Example: mv old_name.txt new_name.txt
+
+9. touch - Create empty file
+   Use Case: Create new empty files or update timestamps
+   Example: touch new_file.txt
+
+10. find - Search for files
+    Use Case: Locate files by name, size, date, etc.
+    Example: find . -name "*.txt"
+
+FILE CONTENT VIEWING
+================================================================================
+
+11. cat - Display file contents
+    Use Case: View entire file content
+    Example: cat file.txt
+
+12. less - Browse file contents
+    Use Case: View large files page by page
+    Example: less large_file.txt
+
+13. more - Display file contents with pagination
+    Use Case: View files with paging capability
+    Example: more file.txt
+
+14. head - Display first lines of file
+    Use Case: Preview beginning of files
+    Example: head -n 20 file.txt (first 20 lines)
+
+15. tail - Display last lines of file
+    Use Case: View end of files (useful for logs)
+    Example: tail -f log.txt (follow log updates)
+
+TEXT PROCESSING
+================================================================================
+
+16. grep - Search text patterns
+    Use Case: Find specific text in files
+    Example: grep "error" log.txt
+
+17. sed - Stream editor for text manipulation
+    Use Case: Find and replace text, perform substitutions
+    Example: sed 's/old/new/g' file.txt
+
+18. awk - Text processing and pattern scanning
+    Use Case: Extract and manipulate columns of data
+    Example: awk '{print $1, $3}' file.txt
+
+19. cut - Cut columns from files
+    Use Case: Extract specific columns from structured data
+    Example: cut -d',' -f1,3 data.csv
+
+20. sort - Sort lines of text
+    Use Case: Organize file contents in order
+    Example: sort -r file.txt (reverse order)
+
+21. uniq - Remove duplicate lines
+    Use Case: Filter out consecutive duplicate lines
+    Example: uniq file.txt
+
+22. wc - Count words, lines, characters
+    Use Case: Get file statistics
+    Example: wc -l file.txt (count lines)
+
+PERMISSIONS AND OWNERSHIP
+================================================================================
+
+23. chmod - Change file permissions
+    Use Case: Modify read/write/execute permissions
+    Example: chmod 755 script.sh
+
+24. chown - Change file owner
+    Use Case: Transfer file ownership
+    Example: chown user:group file.txt
+
+25. chmod - Change file permissions (numeric mode)
+    Use Case: Set permissions using numeric values
+    Example: chmod 644 file.txt (rw-r--r--)
+
+USER AND GROUP MANAGEMENT
+================================================================================
+
+26. whoami - Print current username
+    Use Case: Verify logged-in user
+    Example: whoami
+
+27. id - Display user and group information
+    Use Case: View UID, GID, and group memberships
+    Example: id
+
+28. sudo - Execute as superuser
+    Use Case: Run commands with elevated privileges
+    Example: sudo apt update
+
+29. su - Switch user
+    Use Case: Change to another user account
+    Example: su - username
+
+SYSTEM INFORMATION
+================================================================================
+
+30. uname - Print system information
+    Use Case: Display OS and kernel details
+    Example: uname -a (all information)
+
+31. df - Disk filesystem usage
+    Use Case: Check available disk space
+    Example: df -h (human-readable format)
+
+32. du - Directory disk usage
+    Use Case: Calculate disk space used by files/folders
+    Example: du -sh * (summarize in human format)
+
+33. free - Display memory usage
+    Use Case: Check RAM and swap memory
+    Example: free -h (human-readable)
+
+34. top - Process monitor
+    Use Case: View running processes and resource usage
+    Example: top
+
+35. ps - Display process status
+    Use Case: List running processes
+    Example: ps aux (all processes detailed)
+
+NETWORKING
+================================================================================
+
+36. ping - Test network connectivity
+    Use Case: Check if host is reachable
+    Example: ping google.com
+
+37. ifconfig - Configure network interface
+    Use Case: View network configuration
+    Example: ifconfig
+
+38. ip - IP configuration tool
+    Use Case: Manage networking configuration
+    Example: ip addr show
+
+39. netstat - Network statistics
+    Use Case: Monitor network connections
+    Example: netstat -tuln
+
+40. ssh - Secure shell
+    Use Case: Connect to remote servers securely
+    Example: ssh user@hostname
+
+41. scp - Secure copy
+    Use Case: Copy files between systems securely
+    Example: scp file.txt user@host:/path/
+
+42. ftp - File transfer protocol
+    Use Case: Transfer files to remote server
+    Example: ftp hostname
+
+ARCHIVING AND COMPRESSION
+================================================================================
+
+43. tar - Archive files
+    Use Case: Create backup archives
+    Example: tar -czf archive.tar.gz folder/
+
+44. zip - Compress files
+    Use Case: Create compressed archives
+    Example: zip -r archive.zip folder/
+
+45. unzip - Extract zip archives
+    Use Case: Decompress zip files
+    Example: unzip archive.zip
+
+46. gzip - Compress files
+    Use Case: Compress individual files
+    Example: gzip file.txt
+
+47. gunzip - Decompress gzip files
+    Use Case: Extract gzip compressed files
+    Example: gunzip file.txt.gz
+
+PIPING AND REDIRECTION
+================================================================================
+
+48. | (Pipe) - Chain commands
+    Use Case: Pass output of one command to another
+    Example: cat file.txt | grep "error"
+
+49. > - Redirect output to file
+    Use Case: Save command output to file
+    Example: ls > listing.txt
+
+50. >> - Append output to file
+    Use Case: Add command output to existing file
+    Example: echo "new line" >> file.txt
+
+51. < - Redirect input from file
+    Use Case: Use file as input to command
+    Example: sort < unsorted.txt
+
+SEARCHING AND MATCHING
+================================================================================
+
+52. which - Locate command
+    Use Case: Find executable file path
+    Example: which python
+
+53. whereis - Search for command in standard locations
+    Use Case: Locate binary, source, and man files
+    Example: whereis python
+
+54. file - Determine file type
+    Use Case: Identify file format/type
+    Example: file document.pdf
+
+PACKAGE MANAGEMENT
+================================================================================
+
+55. apt/apt-get - Package manager (Debian/Ubuntu)
+    Use Case: Install, update, remove packages
+    Example: apt install package-name
+
+56. yum - Package manager (Red Hat/CentOS)
+    Use Case: Manage packages on RPM-based systems
+    Example: yum install package-name
+
+57. dpkg - Debian package manager
+    Use Case: Install or query debian packages
+    Example: dpkg -l (list installed packages)
+
+PROCESS MANAGEMENT
+================================================================================
+
+58. kill - Terminate process
+    Use Case: Stop running processes
+    Example: kill -9 PID
+
+59. killall - Terminate processes by name
+    Use Case: Stop all instances of a process
+    Example: killall firefox
+
+60. fg - Bring process to foreground
+    Use Case: Resume background job in foreground
+    Example: fg %1
+
+61. bg - Send process to background
+    Use Case: Resume suspended job in background
+    Example: bg %1
+
+62. jobs - List background jobs
+    Use Case: View all background processes
+    Example: jobs
+
+EDITING FILES
+================================================================================
+
+63. nano - Simple text editor
+    Use Case: Quick file editing
+    Example: nano file.txt
+
+64. vi/vim - Advanced text editor
+    Use Case: Powerful file editing with commands
+    Example: vim file.txt
+
+65. gedit - GUI text editor
+    Use Case: Graphical file editing (if GUI available)
+    Example: gedit file.txt
+
+SHELL AND VARIABLES
+================================================================================
+
+66. echo - Print text
+    Use Case: Display messages or variable values
+    Example: echo $PATH
+
+67. export - Set environment variable
+    Use Case: Make variable available to child processes
+    Example: export PATH=$PATH:/usr/local/bin
+
+68. env - Display environment variables
+    Use Case: View all environment settings
+    Example: env | grep PATH
+
+69. source - Execute commands from file
+    Use Case: Load settings from configuration files
+    Example: source ~/.bashrc
+
+SCRIPTING
+================================================================================
+
+70. bash - Bash shell interpreter
+    Use Case: Run bash scripts or start shell
+    Example: bash script.sh
+
+71. sh - POSIX shell interpreter
+    Use Case: Run shell scripts with portable syntax
+    Example: sh script.sh
+
+72. chmod +x - Make file executable
+    Use Case: Add execute permission to scripts
+    Example: chmod +x script.sh
+
+MISCELLANEOUS
+================================================================================
+
+73. man - Manual pages
+    Use Case: View detailed documentation for commands
+    Example: man ls
+
+74. history - View command history
+    Use Case: See previously typed commands
+    Example: history
+
+75. clear - Clear terminal screen
+    Use Case: Remove all previous output from display
+    Example: clear
+
+76. date - Display current date and time
+    Use Case: Show system date/time
+    Example: date
+
+77. bc - Basic calculator
+    Use Case: Perform arithmetic calculations
+    Example: echo "10 + 5" | bc
+
+78. alias - Create command shortcut
+    Use Case: Define abbreviations for commands
+    Example: alias ll='ls -la'
+
+79. crontab - Schedule tasks
+    Use Case: Schedule commands to run periodically
+    Example: crontab -e
+
+================================================================================
+END OF REFERENCE
+================================================================================
