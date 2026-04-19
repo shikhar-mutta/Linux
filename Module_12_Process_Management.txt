@@ -1,0 +1,50 @@
+================================================================================
+MODULE 12: PROCESS MANAGEMENT
+================================================================================
+
+58. kill - Terminate process
+    Use Case: Stop running processes
+    Example: kill -9 PID
+    
+    Common signals:
+    kill -9 PID              Force kill process
+    kill -15 PID             Graceful termination (default)
+    kill -SIGTERM PID        Send TERM signal
+
+59. killall - Terminate processes by name
+    Use Case: Stop all instances of a process
+    Example: killall firefox
+
+60. fg - Bring process to foreground
+    Use Case: Resume background job in foreground
+    Example: fg %1
+    
+    Usage:
+    fg %1                    Bring job 1 to foreground
+    fg %process_name         Bring named job to foreground
+
+61. bg - Send process to background
+    Use Case: Resume suspended job in background
+    Example: bg %1
+    
+    Usage:
+    bg %1                    Send job 1 to background
+    bg %process_name         Send named job to background
+
+62. jobs - List background jobs
+    Use Case: View all background processes
+    Example: jobs
+    Output: [1]   Running   command1
+            [2]-  Stopped   command2
+            [3]+  Stopped   command3
+
+Common workflow:
+    command &                Start command in background
+    Ctrl+Z                   Suspend current process
+    bg                       Resume in background
+    fg                       Bring to foreground
+    jobs                     List all jobs
+
+================================================================================
+END OF MODULE 12
+================================================================================
