@@ -1,0 +1,48 @@
+================================================================================
+MODULE 13: EDITING FILES
+================================================================================
+
+63. nano - Simple text editor
+    Use Case: Quick file editing
+    Example: nano file.txt
+    
+    Basic Commands:
+    Ctrl+O              Save file
+    Ctrl+X              Exit
+    Ctrl+K              Cut line
+    Ctrl+U              Paste line
+    Ctrl+W              Search
+    Ctrl+A              Beginning of line
+    Ctrl+E              End of line
+
+64. vi/vim - Advanced text editor
+    Use Case: Powerful file editing with commands
+    Example: vim file.txt
+    
+    Modes:
+    ESC                 Switch to command mode
+    i                   Insert mode
+    :wq                 Write and quit
+    :q!                 Quit without saving
+    dd                  Delete line
+    yy                  Copy line
+    p                   Paste
+    /pattern            Search
+    n                   Next match
+
+65. gedit - GUI text editor
+    Use Case: Graphical file editing (if GUI available)
+    Example: gedit file.txt &
+    
+    Usage:
+    gedit file.txt      Open file in gedit
+    gedit file.txt &    Open in background
+
+Quick reference:
+    nano: Easiest for beginners
+    vim: Most powerful for experienced users
+    gedit: Best for GUI environments
+
+================================================================================
+END OF MODULE 13
+================================================================================
