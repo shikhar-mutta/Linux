@@ -1,0 +1,23 @@
+================================================================================
+MODULE 5: USER AND GROUP MANAGEMENT
+================================================================================
+
+26. whoami - Print current username
+    Use Case: Verify logged-in user
+    Example: whoami
+
+27. id - Display user and group information
+    Use Case: View UID, GID, and group memberships
+    Example: id
+
+28. sudo - Execute as superuser
+    Use Case: Run commands with elevated privileges
+    Example: sudo apt update
+
+29. su - Switch user
+    Use Case: Change to another user account
+    Example: su - username
+
+================================================================================
+END OF MODULE 5
+================================================================================
