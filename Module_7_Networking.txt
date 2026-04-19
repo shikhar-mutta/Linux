@@ -1,0 +1,35 @@
+================================================================================
+MODULE 7: NETWORKING
+================================================================================
+
+36. ping - Test network connectivity
+    Use Case: Check if host is reachable
+    Example: ping google.com
+
+37. ifconfig - Configure network interface
+    Use Case: View network configuration
+    Example: ifconfig
+
+38. ip - IP configuration tool
+    Use Case: Manage networking configuration
+    Example: ip addr show
+
+39. netstat - Network statistics
+    Use Case: Monitor network connections
+    Example: netstat -tuln
+
+40. ssh - Secure shell
+    Use Case: Connect to remote servers securely
+    Example: ssh user@hostname
+
+41. scp - Secure copy
+    Use Case: Copy files between systems securely
+    Example: scp file.txt user@host:/path/
+
+42. ftp - File transfer protocol
+    Use Case: Transfer files to remote server
+    Example: ftp hostname
+
+================================================================================
+END OF MODULE 7
+================================================================================
