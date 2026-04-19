@@ -1,0 +1,268 @@
+================================================================================
+MODULE 1: FILE AND DIRECTORY MANAGEMENT
+================================================================================
+
+1. ls - List directory contents
+   Basic Usage: ls
+   Use Case: Display files and directories in the current directory
+   Example: ls
+
+   Variations of ls command:
+   
+   a) ls -a (or --all)
+      Use Case: Show all files including hidden files (starting with .)
+      When to use: When you need to see configuration files like .bashrc, .gitignore
+   
+   b) ls -l (or --long)
+      Use Case: Display detailed list view with permissions, owner, size, date
+      When to use: When you need file permissions, size, and modification time details
+   
+   c) ls -la (or -al)
+      Use Case: Combine both -l and -a to show all files with detailed information
+      When to use: Complete file listing including hidden files with full details
+   
+   d) ls -lh (or --human-readable)
+      Use Case: Show file sizes in human-readable format (KB, MB, GB)
+      When to use: When file sizes are too large and you want easier reading
+   
+   e) ls -R (or --recursive)
+      Use Case: List contents of all subdirectories recursively
+      When to use: When you need to see directory structure at multiple levels
+   
+   f) ls -r (or --reverse)
+      Use Case: Reverse the sort order of files
+      When to use: When you want descending alphabetical order instead of ascending
+   
+   g) ls -S (or --sort=size)
+      Use Case: Sort files by size in descending order
+      When to use: To find large files taking up disk space
+   
+   h) ls -t (or --sort=time)
+      Use Case: Sort files by modification time (newest first)
+      When to use: To see recently modified files first
+   
+   i) ls -rt
+      Use Case: Sort files by modification time (oldest first)
+      When to use: To see oldest files first (reverse time order)
+   
+   j) ls *.txt
+      Use Case: List only files matching a pattern
+      When to use: To filter and show only specific file types
+   
+   k) ls -1 (numeric one)
+      Use Case: List files one per line
+      When to use: Better for scripting or when you want simple single-column output
+   
+   l) ls -m
+      Use Case: List files separated by commas
+      When to use: When you want comma-separated list format
+   
+   m) ls -F (or --classify)
+      Use Case: Append indicators to file types (/ for directories, * for executables, etc.)
+      When to use: To quickly identify file types (files, directories, links, etc.)
+   
+   n) ls -i (or --inode)
+      Use Case: Display inode number for each file
+      When to use: When working with file systems or identifying hard links
+   
+   o) ls -L (or --dereference)
+      Use Case: List symbolic link targets instead of the link itself
+      Example: ls -L
+      When to use: To see what symbolic links point to rather than the link path
+      
+   p) ls -lhS
+      Use Case: Sort by file size with human-readable format and detailed view
+      When to use: To quickly find largest files in a directory
+   
+   q) ls -lht
+      Use Case: Sort by modification time with human-readable format and detailed view
+      When to use: To see recently modified files with full details
+
+2. pwd - Print working directory
+   Basic Usage: pwd
+   Use Case: Display the full path of the current directory you're working in
+   Example: pwd
+
+   Variations of pwd command:
+   
+   a) pwd (basic)
+      Use Case: Display the current working directory path
+      When to use: Most common usage - to know your current location in the file system
+   
+   b) pwd -L (or --logical)
+      Use Case: Display logical path (follows symbolic links as they appear)
+      When to use: When you want the path as it appears with symbolic links
+   
+   c) pwd -P (or --physical)
+      Use Case: Display physical path (resolves all symbolic links to actual paths)
+      When to use: When you need the actual directory location, not symlink references
+   
+   d) pwd > file.txt
+      Use Case: Save current directory path to a file
+      When to use: When you want to save your current location for later reference
+        
+3. cd - Change directory
+   Use Case: Navigate to different directories in the file system
+   Example: cd /home/user/Documents
+
+   Variations of cd command:
+   
+   a) cd (no arguments)
+      Use Case: Change to home directory
+      When to use: Quick way to return to home directory from anywhere
+   
+   b) cd ~ (tilde)
+      Use Case: Explicitly navigate to home directory
+      When to use: Same as 'cd', useful in scripts for clarity
+   
+   c) cd /path/to/directory (absolute path)
+      Use Case: Navigate using full path from root
+      When to use: When you know the exact full path of target directory
+   
+   d) cd ./subfolder (relative path)
+      Use Case: Navigate to subfolder of current directory
+      When to use: When moving to folders inside current directory
+   
+   e) cd .. (parent directory)
+      Use Case: Navigate to parent directory (one level up)
+      When to use: Go up one level in directory hierarchy
+   
+   f) cd ../.. (multiple levels up)
+      Use Case: Navigate multiple levels up the directory tree
+      When to use: Go up 2 or more directory levels
+   
+   g) cd - (previous directory)
+      Use Case: Switch to the previous directory
+      When to use: Toggle between two directories
+      Note: Requires OLDPWD to be set (after first directory change)
+   
+   h) cd ~username (another user's home)
+      Use Case: Navigate to another user's home directory
+      When to use: Access another user's home directory (if permissions allow)
+   
+   i) cd $HOME
+      Use Case: Navigate using environment variable
+      When to use: In scripts where you want explicit home directory reference
+   
+   j) cd /
+      Use Case: Navigate to root directory
+      When to use: Go to system root directory
+   
+   k) cd /tmp
+      Use Case: Navigate to temporary directory
+      When to use: Work with temporary files and scripts
+   
+   l) cd ~ && ls (combine with other commands)
+      Use Case: Change directory and immediately execute command
+      When to use: Navigate and perform action in one command
+   
+   q) cd "directory with spaces"
+      Use Case: Navigate to directory with spaces in name
+      Example: cd "My Documents" or cd My\ Documents
+      When to use: Handle directories with spaces using quotes or escaping
+   
+   r) cd /home/*/Desktop (wildcard expansion)
+      Use Case: Navigate using wildcard patterns
+      When to use: Match directories using pattern matching
+   
+   t) cd $(pwd)
+      Use Case: Stay in current directory (confirms current location)
+      When to use: Debugging or in scripts to validate location
+
+4. mkdir - Create directory
+   Use Case: Create new folders/directories in the file system
+   Example: mkdir folder_name
+   
+   Variations with Use Cases:
+   
+   a) mkdir folder_name
+      Use: Create a single directory in current location
+      When to use: Basic folder creation
+   
+   b) mkdir /home/user/Projects/NewProject
+      Use: Create directory at specified absolute path
+      When to use: Create folder in specific location from anywhere
+   
+   c) mkdir mkdir ./Documents/MyFolder
+      Use: Create directory relative to current location
+      When to use: Create nested folders starting from current directory
+   
+   d) mkdir -p /path/with/nested/folders
+      Use: Create directory and all parent directories if they don't exist
+      When to use: Create entire directory structure in one command
+   
+   e) mkdir folder1 folder2 folder3
+      Use: Create multiple directories in one command
+      When to use: Create several folders at once
+   
+   f) mkdir -m 755 folder_name
+      Use: Create directory with specific permissions
+      Permissions: 755 = rwxr-xr-x (owner read/write/execute, others read/execute)
+   
+   g) mkdir -m 700 private_folder
+      Use: Create directory accessible only by owner
+      When to use: Create private directories for sensitive data
+   
+   h) mkdir -v folder_name
+      Use: Show messages as directories are created
+      When to use: See confirmation of directory creation
+   
+   i) mkdir -p -v /nested/directory/structure
+      Use: Create nested directories with verbose output
+      When to use: Create complex structure with confirmation
+   
+   j) mkdir {folder1,folder2,folder3}
+      Use: Create multiple directories using shell expansion
+      When to use: Create multiple similar named directories
+   
+   k) mkdir -p project/{src,build,docs,tests}
+      Use: Create directory structure with subdirectories
+      When to use: Initialize project structure scaffolding
+   
+   l) mkdir $(date +%Y-%m-%d)
+      Use: Create directory with current date as name
+      When to use: Create dated folders for daily logs/backups
+   
+   m) mkdir -p ~/NewProject && cd ~/NewProject
+      Use: Create directory and immediately enter it
+      When to use: Set up and work in new directory in one go
+   
+   n) mkdir test_$(date +%s)
+      Use: Create uniquely named directories with timestamp
+      When to use: Create multiple test directories with unique names
+   
+   o) for i in {1..5}; do mkdir folder_$i; done
+      Use: Create multiple numbered directories using loop
+      When to use: Create series of numbered directories
+   
+   p) if ! [ -d folder ]; then mkdir folder; fi
+      Use: Create directory only if it doesn't exist
+      When to use: Safe creation in scripts to avoid errors
+      
+5. rmdir - Remove empty directory
+   Use Case: Delete empty directories
+   Example: rmdir my_folder
+
+6. rm - Remove files
+   Use Case: Delete files and directories
+   Example: rm -r my_folder (recursive deletion)
+
+7. cp - Copy files and directories
+   Use Case: Duplicate files/folders
+   Example: cp file.txt backup.txt
+
+8. mv - Move or rename files
+   Use Case: Relocate or rename files
+   Example: mv old_name.txt new_name.txt
+
+9. touch - Create empty file
+   Use Case: Create new empty files or update timestamps
+   Example: touch new_file.txt
+
+10. find - Search for files
+    Use Case: Locate files by name, size, date, etc.
+    Example: find . -name "*.txt"
+
+================================================================================
+END OF MODULE 1
+================================================================================
