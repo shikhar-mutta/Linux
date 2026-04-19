@@ -1,0 +1,55 @@
+================================================================================
+MODULE 14: SHELL AND VARIABLES
+================================================================================
+
+66. echo - Print text
+    Use Case: Display messages or variable values
+    Example: echo $PATH
+    
+    Common usage:
+    echo "Hello World"       Print text
+    echo $PATH              Display environment variable
+    echo $USER              Show current user
+    echo $HOME              Show home directory
+    echo $PWD               Show current directory
+
+67. export - Set environment variable
+    Use Case: Make variable available to child processes
+    Example: export PATH=$PATH:/usr/local/bin
+    
+    Common usage:
+    export VAR=value        Set variable
+    export PATH=$PATH:/path Add to PATH
+    export LANG=en_US.UTF-8 Set language
+
+68. env - Display environment variables
+    Use Case: View all environment settings
+    Example: env | grep PATH
+    
+    Common usage:
+    env                     Show all variables
+    env | grep JAVA_HOME    Search for variable
+    env -i command          Run with empty environment
+
+69. source - Execute commands from file
+    Use Case: Load settings from configuration files
+    Example: source ~/.bashrc
+    
+    Common usage:
+    source ~/.bashrc        Load bash configuration
+    source ~/.profile       Load profile settings
+    . ~/.bashrc             Alternative syntax (dot notation)
+    source script.sh        Execute shell script in current shell
+
+Environment Variables Reference:
+    PATH                Directories to search for commands
+    HOME                User's home directory
+    USER                Current username
+    PWD                 Current working directory
+    SHELL               Current shell
+    TERM                Terminal type
+    LANG                Language/locale setting
+
+================================================================================
+END OF MODULE 14
+================================================================================
