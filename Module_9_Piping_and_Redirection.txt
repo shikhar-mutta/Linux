@@ -1,0 +1,31 @@
+================================================================================
+MODULE 9: PIPING AND REDIRECTION
+================================================================================
+
+48. | (Pipe) - Chain commands
+    Use Case: Pass output of one command to another
+    Example: cat file.txt | grep "error"
+
+49. > - Redirect output to file
+    Use Case: Save command output to file
+    Example: ls > listing.txt
+
+50. >> - Append output to file
+    Use Case: Add command output to existing file
+    Example: echo "new line" >> file.txt
+
+51. < - Redirect input from file
+    Use Case: Use file as input to command
+    Example: sort < unsorted.txt
+
+Common combinations:
+    command1 | command2           Pass output to another command
+    ls > file.txt                 Save output to file
+    ls >> file.txt                Append to file
+    sort < input.txt > output.txt Sort input file, save to output
+    cat file.txt | grep pattern   Search in file output
+    command 2>&1 | tee output.txt Capture stdout and stderr
+
+================================================================================
+END OF MODULE 9
+================================================================================
