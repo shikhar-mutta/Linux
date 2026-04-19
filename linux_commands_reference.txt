@@ -6,8 +6,80 @@ FILE AND DIRECTORY MANAGEMENT
 ================================================================================
 
 1. ls - List directory contents
-   Use Case: View files and folders in a directory
-   Example: ls -la (shows hidden files with details)
+   Basic Usage: ls
+   Use Case: Display files and directories in the current directory
+   Example: ls
+
+   Variations of ls command:
+   
+   a) ls -a (or --all)
+      Use Case: Show all files including hidden files (starting with .)
+      When to use: When you need to see configuration files like .bashrc, .gitignore
+   
+   b) ls -l (or --long)
+      Use Case: Display detailed list view with permissions, owner, size, date
+      When to use: When you need file permissions, size, and modification time details
+   
+   c) ls -la (or -al)
+      Use Case: Combine both -l and -a to show all files with detailed information
+      When to use: Complete file listing including hidden files with full details
+   
+   d) ls -lh (or --human-readable)
+      Use Case: Show file sizes in human-readable format (KB, MB, GB)
+      When to use: When file sizes are too large and you want easier reading
+   
+   e) ls -R (or --recursive)
+      Use Case: List contents of all subdirectories recursively
+      When to use: When you need to see directory structure at multiple levels
+   
+   f) ls -r (or --reverse)
+      Use Case: Reverse the sort order of files
+      When to use: When you want descending alphabetical order instead of ascending
+   
+   g) ls -S (or --sort=size)
+      Use Case: Sort files by size in descending order
+      When to use: To find large files taking up disk space
+   
+   h) ls -t (or --sort=time)
+      Use Case: Sort files by modification time (newest first)
+      When to use: To see recently modified files first
+   
+   i) ls -rt
+      Use Case: Sort files by modification time (oldest first)
+      When to use: To see oldest files first (reverse time order)
+   
+   j) ls *.txt
+      Use Case: List only files matching a pattern
+      When to use: To filter and show only specific file types
+   
+   k) ls -1 (numeric one)
+      Use Case: List files one per line
+      When to use: Better for scripting or when you want simple single-column output
+   
+   l) ls -m
+      Use Case: List files separated by commas
+      When to use: When you want comma-separated list format
+   
+   m) ls -F (or --classify)
+      Use Case: Append indicators to file types (/ for directories, * for executables, etc.)
+      When to use: To quickly identify file types (files, directories, links, etc.)
+   
+   n) ls -i (or --inode)
+      Use Case: Display inode number for each file
+      When to use: When working with file systems or identifying hard links
+   
+   o) ls -L (or --dereference)
+      Use Case: List symbolic link targets instead of the link itself
+      Example: ls -L
+      When to use: To see what symbolic links point to rather than the link path
+      
+   p) ls -lhS
+      Use Case: Sort by file size with human-readable format and detailed view
+      When to use: To quickly find largest files in a directory
+   
+   q) ls -lht
+      Use Case: Sort by modification time with human-readable format and detailed view
+      When to use: To see recently modified files with full details
 
 2. pwd - Print working directory
    Use Case: Display current directory path
