@@ -1,0 +1,27 @@
+================================================================================
+MODULE 2: FILE CONTENT VIEWING
+================================================================================
+
+11. cat - Display file contents
+    Use Case: View entire file content
+    Example: cat file.txt
+
+12. less - Browse file contents
+    Use Case: View large files page by page
+    Example: less large_file.txt
+
+13. more - Display file contents with pagination
+    Use Case: View files with paging capability
+    Example: more file.txt
+
+14. head - Display first lines of file
+    Use Case: Preview beginning of files
+    Example: head -n 20 file.txt (first 20 lines)
+
+15. tail - Display last lines of file
+    Use Case: View end of files (useful for logs)
+    Example: tail -f log.txt (follow log updates)
+
+================================================================================
+END OF MODULE 2
+================================================================================
