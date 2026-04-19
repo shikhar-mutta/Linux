@@ -105,8 +105,45 @@ FILE AND DIRECTORY MANAGEMENT
       When to use: When you want to save your current location for later reference
         
 3. cd - Change directory
-   Use Case: Navigate to different directories
+   Use Case: Navigate to different directories in the file system
    Example: cd /home/user/Documents
+
+   Variations of cd command:
+   
+   a) cd (no arguments)
+      Use Case: Change to home directory
+      When to use: Quick way to return to home directory from anywhere
+   
+   b) cd ~ (tilde)
+      Use Case: Explicitly navigate to home directory
+      When to use: Same as 'cd', useful in scripts for clarity
+   
+   c) cd /path/to/directory (absolute path)
+      Use Case: Navigate using full path from root
+      When to use: When you know the exact full path of target directory
+   
+   d) cd ./subfolder (relative path)
+      Use Case: Navigate to subfolder of current directory
+      When to use: When moving to folders inside current directory
+   
+   e) cd .. (parent directory)
+      Use Case: Navigate to parent directory (one level up)
+      When to use: Go up one level in directory hierarchy
+   
+   f) cd ../.. (multiple levels up)
+      Use Case: Navigate multiple levels up the directory tree
+      When to use: Go up 2 or more directory levels
+   
+   g) cd - (previous directory)
+      Use Case: Switch to the previous directory
+      When to use: Toggle between two directories
+      Note: Requires OLDPWD to be set (after first directory change)
+   
+   h) cd ~username (another user's home)
+      Use Case: Navigate to another user's home directory
+      When to use: Access another user's home directory (if permissions allow)
+   
+  
 
 4. mkdir - Create directory
    Use Case: Create new folders
