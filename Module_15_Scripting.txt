@@ -1,0 +1,63 @@
+================================================================================
+MODULE 15: SCRIPTING
+================================================================================
+
+70. bash - Bash shell interpreter
+    Use Case: Run bash scripts or start shell
+    Example: bash script.sh
+    
+    Common usage:
+    bash                    Start interactive bash shell
+    bash script.sh          Run bash script
+    bash -x script.sh       Debug script (show commands)
+    bash -c "command"       Execute command
+
+71. sh - POSIX shell interpreter
+    Use Case: Run shell scripts with portable syntax
+    Example: sh script.sh
+    
+    Common usage:
+    sh                      Start sh shell
+    sh script.sh            Run script with sh
+    sh -x script.sh         Debug script
+    
+    Note: More portable than bash, fewer features
+
+72. chmod +x - Make file executable
+    Use Case: Add execute permission to scripts
+    Example: chmod +x script.sh
+    
+    Common usage:
+    chmod +x script.sh      Make script executable
+    chmod 755 script.sh     Owner read/write/execute, others read/execute
+    chmod 700 script.sh     Owner only read/write/execute
+
+Creating a simple bash script:
+    #!/bin/bash             Script header
+    echo "Hello World"       Commands
+    pwd                     Show current directory
+    
+    Save as: myscript.sh
+    Make executable: chmod +x myscript.sh
+    Run: ./myscript.sh
+
+Basic script structure:
+    #!/bin/bash
+    # This is a comment
+    
+    # Variables
+    name="value"
+    
+    # If statement
+    if [ condition ]; then
+        echo "True"
+    fi
+    
+    # Loop
+    for i in 1 2 3; do
+        echo $i
+    done
+
+================================================================================
+END OF MODULE 15
+================================================================================
