@@ -1,0 +1,40 @@
+================================================================================
+MODULE 11: PACKAGE MANAGEMENT
+================================================================================
+
+For Debian/Ubuntu Systems:
+
+55. apt/apt-get - Package manager (Debian/Ubuntu)
+    Use Case: Install, update, remove packages
+    
+    Common commands:
+    apt update                  Update package list
+    apt install package-name    Install a package
+    apt remove package-name     Remove a package
+    apt upgrade                 Upgrade all packages
+    apt search keyword          Search for packages
+    apt show package-name       Show package details
+
+For Red Hat/CentOS Systems:
+
+56. yum - Package manager (Red Hat/CentOS)
+    Use Case: Manage packages on RPM-based systems
+    
+    Common commands:
+    yum update                  Update package list
+    yum install package-name    Install a package
+    yum remove package-name     Remove a package
+    yum search keyword          Search for packages
+
+57. dpkg - Debian package manager
+    Use Case: Install or query debian packages
+    
+    Common commands:
+    dpkg -l                     List installed packages
+    dpkg -i package.deb         Install .deb file
+    dpkg -r package-name        Remove a package
+    dpkg -L package-name        List files in package
+
+================================================================================
+END OF MODULE 11
+================================================================================
