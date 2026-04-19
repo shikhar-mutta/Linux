@@ -82,9 +82,28 @@ FILE AND DIRECTORY MANAGEMENT
       When to use: To see recently modified files with full details
 
 2. pwd - Print working directory
-   Use Case: Display current directory path
+   Basic Usage: pwd
+   Use Case: Display the full path of the current directory you're working in
    Example: pwd
 
+   Variations of pwd command:
+   
+   a) pwd (basic)
+      Use Case: Display the current working directory path
+      When to use: Most common usage - to know your current location in the file system
+   
+   b) pwd -L (or --logical)
+      Use Case: Display logical path (follows symbolic links as they appear)
+      When to use: When you want the path as it appears with symbolic links
+   
+   c) pwd -P (or --physical)
+      Use Case: Display physical path (resolves all symbolic links to actual paths)
+      When to use: When you need the actual directory location, not symlink references
+   
+   d) pwd > file.txt
+      Use Case: Save current directory path to a file
+      When to use: When you want to save your current location for later reference
+        
 3. cd - Change directory
    Use Case: Navigate to different directories
    Example: cd /home/user/Documents
