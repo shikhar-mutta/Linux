@@ -6,7 +6,6 @@ FILE AND DIRECTORY MANAGEMENT
 ================================================================================
 
 1. ls - List directory contents
-   Basic Usage: ls
    Use Case: Display files and directories in the current directory
    Example: ls
 
@@ -82,7 +81,6 @@ FILE AND DIRECTORY MANAGEMENT
       When to use: To see recently modified files with full details
 
 2. pwd - Print working directory
-   Basic Usage: pwd
    Use Case: Display the full path of the current directory you're working in
    Example: pwd
 
@@ -173,8 +171,74 @@ FILE AND DIRECTORY MANAGEMENT
       When to use: Debugging or in scripts to validate location
 
 4. mkdir - Create directory
-   Use Case: Create new folders
-   Example: mkdir my_folder
+   Use Case: Create new folders/directories in the file system
+   Example: mkdir folder_name
+   
+   Variations with Use Cases:
+   
+   a) mkdir folder_name
+      Use: Create a single directory in current location
+      When to use: Basic folder creation
+   
+   b) mkdir /home/user/Projects/NewProject
+      Use: Create directory at specified absolute path
+      When to use: Create folder in specific location from anywhere
+   
+   c) mkdir mkdir ./Documents/MyFolder
+      Use: Create directory relative to current location
+      When to use: Create nested folders starting from current directory
+   
+   d) mkdir -p /path/with/nested/folders
+      Use: Create directory and all parent directories if they don't exist
+      When to use: Create entire directory structure in one command
+   
+   e) mkdir folder1 folder2 folder3
+      Use: Create multiple directories in one command
+      When to use: Create several folders at once
+   
+   f) mkdir -m 755 folder_name
+      Use: Create directory with specific permissions
+      Permissions: 755 = rwxr-xr-x (owner read/write/execute, others read/execute)
+   
+   g) mkdir -m 700 private_folder
+      Use: Create directory accessible only by owner
+      When to use: Create private directories for sensitive data
+   
+   h) mkdir -v folder_name
+      Use: Show messages as directories are created
+      When to use: See confirmation of directory creation
+   
+   i) mkdir -p -v /nested/directory/structure
+      Use: Create nested directories with verbose output
+      When to use: Create complex structure with confirmation
+   
+   j) mkdir {folder1,folder2,folder3}
+      Use: Create multiple directories using shell expansion
+      When to use: Create multiple similar named directories
+   
+   k) mkdir -p project/{src,build,docs,tests}
+      Use: Create directory structure with subdirectories
+      When to use: Initialize project structure scaffolding
+   
+   l) mkdir $(date +%Y-%m-%d)
+      Use: Create directory with current date as name
+      When to use: Create dated folders for daily logs/backups
+   
+   m) mkdir -p ~/NewProject && cd ~/NewProject
+      Use: Create directory and immediately enter it
+      When to use: Set up and work in new directory in one go
+   
+   n) mkdir test_$(date +%s)
+      Use: Create uniquely named directories with timestamp
+      When to use: Create multiple test directories with unique names
+   
+   o) for i in {1..5}; do mkdir folder_$i; done
+      Use: Create multiple numbered directories using loop
+      When to use: Create series of numbered directories
+   
+   p) if ! [ -d folder ]; then mkdir folder; fi
+      Use: Create directory only if it doesn't exist
+      When to use: Safe creation in scripts to avoid errors
 
 5. rmdir - Remove empty directory
    Use Case: Delete empty directories
