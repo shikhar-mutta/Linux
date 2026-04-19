@@ -143,7 +143,34 @@ FILE AND DIRECTORY MANAGEMENT
       Use Case: Navigate to another user's home directory
       When to use: Access another user's home directory (if permissions allow)
    
-  
+   i) cd $HOME
+      Use Case: Navigate using environment variable
+      When to use: In scripts where you want explicit home directory reference
+   
+   j) cd /
+      Use Case: Navigate to root directory
+      When to use: Go to system root directory
+   
+   k) cd /tmp
+      Use Case: Navigate to temporary directory
+      When to use: Work with temporary files and scripts
+   
+   l) cd ~ && ls (combine with other commands)
+      Use Case: Change directory and immediately execute command
+      When to use: Navigate and perform action in one command
+   
+   q) cd "directory with spaces"
+      Use Case: Navigate to directory with spaces in name
+      Example: cd "My Documents" or cd My\ Documents
+      When to use: Handle directories with spaces using quotes or escaping
+   
+   r) cd /home/*/Desktop (wildcard expansion)
+      Use Case: Navigate using wildcard patterns
+      When to use: Match directories using pattern matching
+   
+   t) cd $(pwd)
+      Use Case: Stay in current directory (confirms current location)
+      When to use: Debugging or in scripts to validate location
 
 4. mkdir - Create directory
    Use Case: Create new folders
