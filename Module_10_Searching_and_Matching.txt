@@ -1,0 +1,27 @@
+================================================================================
+MODULE 10: SEARCHING AND MATCHING
+================================================================================
+
+52. which - Locate command
+    Use Case: Find executable file path
+    Example: which python
+    Output: /usr/bin/python
+
+53. whereis - Search for command in standard locations
+    Use Case: Locate binary, source, and man files
+    Example: whereis python
+    Output: python: /usr/bin/python /usr/lib/python /usr/share/man/man1/python.1
+
+54. file - Determine file type
+    Use Case: Identify file format/type
+    Example: file document.pdf
+    Output: document.pdf: PDF document, version 1.4
+
+Common usage:
+    which ls                 Find the ls command location
+    whereis gcc              Find gcc compiler and related files
+    file *.txt               Check type of all text files
+
+================================================================================
+END OF MODULE 10
+================================================================================
