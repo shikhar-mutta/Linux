@@ -1,0 +1,98 @@
+================================================================================
+MODULE 16: MISCELLANEOUS
+================================================================================
+
+73. man - Manual pages
+    Use Case: View detailed documentation for commands
+    Example: man ls
+    
+    Navigation:
+    Space               Next page
+    q                   Quit
+    /keyword            Search
+    n                   Next match
+    
+    Common usage:
+    man ls              Manual for ls command
+    man 5 passwd        Manual for passwd file format
+    man -k keyword      Search man pages by keyword
+
+74. history - View command history
+    Use Case: See previously typed commands
+    Example: history
+    
+    Common usage:
+    history             Show all commands
+    history 10          Show last 10 commands
+    !ls                 Run last ls command
+    !!                  Run last command
+    !-2                 Run command from 2 lines back
+
+75. clear - Clear terminal screen
+    Use Case: Remove all previous output from display
+    Example: clear
+    
+    Alternative: Ctrl+L keyboard shortcut
+
+76. date - Display current date and time
+    Use Case: Show system date/time
+    Example: date
+    
+    Format examples:
+    date                Current date and time
+    date +%Y-%m-%d      Date in YYYY-MM-DD format
+    date +%H:%M:%S      Time in HH:MM:SS format
+    date +%A            Day of week
+
+77. bc - Basic calculator
+    Use Case: Perform arithmetic calculations
+    Example: echo "10 + 5" | bc
+    
+    Common usage:
+    echo "2 + 2" | bc           Addition
+    echo "10 - 3" | bc          Subtraction
+    echo "4 * 5" | bc           Multiplication
+    echo "20 / 4" | bc          Division
+    echo "scale=2; 10/3" | bc    Decimal places
+
+78. alias - Create command shortcut
+    Use Case: Define abbreviations for commands
+    Example: alias ll='ls -la'
+    
+    Common usage:
+    alias ll='ls -la'           Create alias
+    alias                       List all aliases
+    unalias ll                  Remove alias
+    
+    Make permanent (add to ~/.bashrc):
+    alias ll='ls -la'
+    alias la='ls -A'
+    alias l='ls -CF'
+
+79. crontab - Schedule tasks
+    Use Case: Schedule commands to run periodically
+    Example: crontab -e
+    
+    Common usage:
+    crontab -e          Edit cron jobs
+    crontab -l          List cron jobs
+    crontab -r          Remove all cron jobs
+    
+    Crontab format:
+    * * * * * command
+    | | | | |
+    | | | | +--- Day of week (0-7)
+    | | | +------- Month (1-12)
+    | | +--------- Day of month (1-31)
+    | +----------- Hour (0-23)
+    +------------- Minute (0-59)
+    
+    Examples:
+    0 9 * * *     Every day at 9 AM
+    0 */6 * * *   Every 6 hours
+    0 0 * * 0     Every Sunday at midnight
+    30 2 * * 1-5  Weekdays at 2:30 AM
+
+================================================================================
+END OF MODULE 16
+================================================================================
