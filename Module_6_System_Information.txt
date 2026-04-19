@@ -1,0 +1,31 @@
+================================================================================
+MODULE 6: SYSTEM INFORMATION
+================================================================================
+
+30. uname - Print system information
+    Use Case: Display OS and kernel details
+    Example: uname -a (all information)
+
+31. df - Disk filesystem usage
+    Use Case: Check available disk space
+    Example: df -h (human-readable format)
+
+32. du - Directory disk usage
+    Use Case: Calculate disk space used by files/folders
+    Example: du -sh * (summarize in human format)
+
+33. free - Display memory usage
+    Use Case: Check RAM and swap memory
+    Example: free -h (human-readable)
+
+34. top - Process monitor
+    Use Case: View running processes and resource usage
+    Example: top
+
+35. ps - Display process status
+    Use Case: List running processes
+    Example: ps aux (all processes detailed)
+
+================================================================================
+END OF MODULE 6
+================================================================================
