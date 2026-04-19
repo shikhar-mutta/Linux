@@ -1,0 +1,33 @@
+================================================================================
+MODULE 8: ARCHIVING AND COMPRESSION
+================================================================================
+
+43. tar - Archive files
+    Use Case: Create backup archives
+    Example: tar -czf archive.tar.gz folder/
+
+44. zip - Compress files
+    Use Case: Create compressed archives
+    Example: zip -r archive.zip folder/
+
+45. unzip - Extract zip archives
+    Use Case: Decompress zip files
+    Example: unzip archive.zip
+
+46. gzip - Compress files
+    Use Case: Compress individual files
+    Example: gzip file.txt
+
+47. gunzip - Decompress gzip files
+    Use Case: Extract gzip compressed files
+    Example: gunzip file.txt.gz
+
+Common tar commands:
+    tar -czf archive.tar.gz folder/    Create compressed tar
+    tar -xzf archive.tar.gz            Extract tar.gz
+    tar -cvf archive.tar folder/       Create tar (verbose)
+    tar -tf archive.tar.gz             List tar contents
+
+================================================================================
+END OF MODULE 8
+================================================================================
