@@ -1,0 +1,35 @@
+================================================================================
+MODULE 3: TEXT PROCESSING
+================================================================================
+
+16. grep - Search text patterns
+    Use Case: Find specific text in files
+    Example: grep "error" log.txt
+
+17. sed - Stream editor for text manipulation
+    Use Case: Find and replace text, perform substitutions
+    Example: sed 's/old/new/g' file.txt
+
+18. awk - Text processing and pattern scanning
+    Use Case: Extract and manipulate columns of data
+    Example: awk '{print $1, $3}' file.txt
+
+19. cut - Cut columns from files
+    Use Case: Extract specific columns from structured data
+    Example: cut -d',' -f1,3 data.csv
+
+20. sort - Sort lines of text
+    Use Case: Organize file contents in order
+    Example: sort -r file.txt (reverse order)
+
+21. uniq - Remove duplicate lines
+    Use Case: Filter out consecutive duplicate lines
+    Example: uniq file.txt
+
+22. wc - Count words, lines, characters
+    Use Case: Get file statistics
+    Example: wc -l file.txt (count lines)
+
+================================================================================
+END OF MODULE 3
+================================================================================
