@@ -1,0 +1,29 @@
+================================================================================
+MODULE 4: PERMISSIONS AND OWNERSHIP
+================================================================================
+
+23. chmod - Change file permissions
+    Use Case: Modify read/write/execute permissions
+    Example: chmod 755 script.sh
+
+24. chown - Change file owner
+    Use Case: Transfer file ownership
+    Example: chown user:group file.txt
+
+25. chmod - Change file permissions (numeric mode)
+    Use Case: Set permissions using numeric values
+    Example: chmod 644 file.txt (rw-r--r--)
+
+Permission Reference:
+    4 = read (r)
+    2 = write (w)
+    1 = execute (x)
+    
+    755 = rwxr-xr-x (owner read/write/execute, others read/execute)
+    644 = rw-r--r-- (owner read/write, others read only)
+    700 = rwx------ (owner read/write/execute, others none)
+    777 = rwxrwxrwx (everyone read/write/execute)
+
+================================================================================
+END OF MODULE 4
+================================================================================
