@@ -290,8 +290,7 @@ FILE AND DIRECTORY MANAGEMENT
    
    k) rmdir ./folder
       Use: Remove directory using relative path with dot notation
-      When to use: Remove relative to current location
-   
+      When to use: Remove relative to current location 
 6. rm - Remove files
    Use Case: Delete files and directories
    Example: rm -r my_folder (recursive deletion)
