@@ -291,9 +291,76 @@ FILE AND DIRECTORY MANAGEMENT
    k) rmdir ./folder
       Use: Remove directory using relative path with dot notation
       When to use: Remove relative to current location 
+
 6. rm - Remove files
    Use Case: Delete files and directories
    Example: rm -r my_folder (recursive deletion)
+
+   Variations of rm command:
+
+   a) rm <filename>
+      Use Case: Remove a single file
+      When to use: When you want to delete a specific file
+   
+   b) rm -f read_only_file.txt (or --force)
+      Use Case: Force remove a file without prompting
+      When to use: When you want to remove files without confirmation or when files have restricted permissions
+   
+   c) rm -i file.txt (or --interactive)
+      Use Case: Prompt before deleting each file
+      When to use: When you want confirmation before removing files to avoid accidental deletion
+   
+   d) rm -r my_folder (or --recursive)
+      Use Case: Remove a directory and all its contents recursively
+      When to use: When you want to delete a directory with files and subdirectories
+   
+   e) rm -rf old_project (or --recursive --force)
+      Use Case: Force remove a directory and all contents without prompting
+      When to use: When you want to quickly delete large directories without confirmation (use with caution!)
+   
+   f) rm -ri <directory> (or --recursive --interactive)
+      Use Case: Recursively remove directory with prompts for each item
+      When to use: When deleting large directories but you want to be careful about what's removed
+   
+   g) rm *.txt (deletes all text files)
+      Use Case: Remove all files matching a pattern
+      When to use: When you want to delete all files of a specific type
+   
+   h) rm -v <filename> (or --verbose)
+      Use Case: Display files being deleted
+      When to use: When you want to see what files are being removed
+   
+   i) rm -rv <directory> (or --recursive --verbose)
+      Use Case: Recursively remove directory while showing all deleted items
+      When to use: When you want visual feedback of what's being deleted recursively
+   
+   j) rm -d <directory> (or --dir)
+      Use Case: Remove empty directories (like rmdir)
+      When to use: When you want to remove only empty directories safely
+   
+   k) find . -name "*.tmp" -type f -exec rm {} \; (with find command)
+      Use Case: Remove files found by find command with specific criteria
+      When to use: When you want to delete files based on complex conditions (size, age, name pattern, etc.)
+   
+   l) rm --no-preserve-root /
+      Use Case: Override protection against removing root directory
+      When to use: System administration only (extremely dangerous!)
+   
+   m) rm -P <filename> (on some systems)  // ***
+      Use Case: Securely remove files by overwriting before deletion
+      When to use: When you want to permanently destroy sensitive files so recovery is impossible
+   
+   n) rm -- <filename>  // ***
+      Use Case: Remove files with special or problematic names
+      When to use: When filename starts with dash or has special characters
+   
+   o) rm <file1> <file2> <file3>
+      Use Case: Remove multiple specific files at once
+      When to use: When you want to delete several known files
+   
+   p) rm -I <directory> (or --interactive=once)
+      Use Case: Prompt once before removing more than 3 files or recursively
+      When to use: A middle ground between -i and no prompts for bulk deletions
 
 7. cp - Copy files and directories
    Use Case: Duplicate files/folders
