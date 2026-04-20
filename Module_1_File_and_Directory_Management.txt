@@ -362,8 +362,91 @@ MODULE 1: FILE AND DIRECTORY MANAGEMENT
        When to use: A middle ground between -i and no prompts for bulk deletions
 
 7. cp - Copy files and directories
-   Use Case: Duplicate files/folders
+   Basic Usage: cp <source> <destination>
+   Use Case: Duplicate files and directories in the file system
    Example: cp file.txt backup.txt
+
+   Variations of cp command:
+
+   1) cp <source> <destination> // cp document.txt document_backup.txt
+      Use Case: Copy a single file to a new location or with new name
+      When to use: Basic file duplication
+   
+   2) cp -i <source> <destination> (or --interactive)
+      Use Case: Prompt before overwriting existing file
+      When to use: When you want confirmation before replacing files
+   
+   3) cp -f <source> <destination> (or --force)
+      Use Case: Force copy and overwrite without prompting
+      When to use: When you want to overwrite destination file regardless
+   
+   4) cp -v <source> <destination> (or --verbose)
+      Use Case: Display verbose output showing files being copied
+      When to use: When you want to see progress and confirmation
+   
+   5) cp -r <directory> <destination> (or --recursive) // cp -r /home/user/Documents /home/user/Documents_backup
+      Use Case: Copy directory and all its contents recursively
+      When to use: When you need to copy entire folder structures
+   
+   6) cp -R <directory> <destination> // cp -R old_project new_project
+      Use Case: Recursive copy (alternative to -r, may handle symlinks differently)
+      When to use: Platform-specific alternative for recursive copying
+   
+   7) cp -p <source> <destination> (or --preserve=mode,ownership,timestamps) // ***
+      Use Case: Copy file and preserve permissions, ownership, and timestamps
+      When to use: When you need exact copy with original attributes
+   
+   8) cp -a <directory> <destination> (or --archive)  
+      Use Case: Archive copy - recursively copy with all attributes preserved
+      When to use: For backup purposes to maintain exact file properties
+   
+   9) cp -d (or --no-dereference --preserve=links)
+      Use Case: Copy symlinks as symlinks instead of copying target content
+      When to use: When you want to preserve symbolic links as-is
+   
+   10) cp -P (or --no-dereference) // cp -P link_file target_copy
+        Use Case: Copy symbolic links as symlinks (BSD style)
+        When to use: Follow symlinks only on command line, preserve in recursion
+   
+   11) cp -L (or --dereference)  // cp -L symlink.txt actual_copy.txt
+        Use Case: Always follow symbolic links and copy the actual file content
+        When to use: When you want to copy the target file instead of the symlink
+   
+   12) cp -u <source> <destination> (or --update)
+        Use Case: Copy only when source is newer or destination is missing
+        When to use: For incremental backups or syncing folders
+   
+   13) cp -n <source> <destination> (or --no-clobber)
+        Use Case: Do not overwrite existing destination file
+        When to use: Safe copy that won't replace existing files
+   
+   14) cp -b <source> <destination> (or --backup)  // cp -b new_version.txt version.txt
+        Use Case: Backup existing destination file before overwriting
+        When to use: When you want to keep a backup of overwritten files
+   
+   15) cp -rv <directory> <destination> (or --recursive --verbose) //  cp -rv source_dir/ backup_dir/
+        Use Case: Recursively copy directory with verbose output
+        When to use: For detailed feedback when copying large directory structures
+   
+   16) cp <file1> <file2> <file3> <destination_dir>/ (multiple files) // cp file1.txt file2.txt file3.txt /backup/
+        Use Case: Copy multiple files to destination directory
+        When to use: Copy several specific files at once
+   
+   17) cp *.txt <destination>/ (with wildcards) // cp *.log /var/log/archive/
+        Use Case: Copy all files matching pattern to destination
+        When to use: Bulk copy of specific file types
+   
+   18) cp -T <source_dir> <destination_dir> (or --no-target-directory)
+        Use Case: Treat destination as regular file, not directory
+        When to use: When destination path should not be treated as directory
+   
+   19) cp --preserve=all <source> <destination>
+        Use Case: Copy and preserve all attributes (permissions, times, context, links)
+        When to use: Maximum preservation of file properties
+   
+   20) cp -s <source> <destination> (or --symbolic-link)
+        Use Case: Create symbolic link at destination instead of copying
+        When to use: When you want to link to file instead of copying
 
 8. mv - Move or rename files
    Use Case: Relocate or rename files
