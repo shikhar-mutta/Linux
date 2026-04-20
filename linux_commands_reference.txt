@@ -244,6 +244,54 @@ FILE AND DIRECTORY MANAGEMENT
    Use Case: Delete empty directories
    Example: rmdir my_folder
 
+   Variations with Use Cases:
+   
+   a) rmdir folder_name
+      Use: Remove a single empty directory in current location
+      When to use: Basic directory removal
+      Note: Only works if directory is completely empty
+   
+   b) rmdir /path/to/folder
+      Use: Remove directory at specified absolute path
+      When to use: Remove directory from anywhere in the file system
+   
+   c) rmdir folder1 folder2 folder3
+      Use: Remove multiple empty directories at once
+      When to use: Delete several empty folders in one command
+   
+   d) rmdir -p /path/to/nested/folder
+      Use: Remove directory and empty parent directories
+      When to use: Clean up nested directory structure when all are empty
+      Note: Stops if it encounters non-empty directory
+   
+   e) rmdir -p --ignore-fail-on-non-empty folder
+      Use: Ignore errors if directories are not empty
+      When to use: Script execution without stopping on errors
+   
+   f) rmdir -v folder_name
+      Use: Show messages when directory is removed
+      When to use: Confirmation of directory deletion
+
+   g) rmdir folder/subfolder/nested
+      Use: Remove nested directory with relative path
+      When to use: Remove subdirectory relative to current location
+   
+   h) for folder in folder1 folder2 folder3; do rmdir "$folder"; done
+      Use: Remove multiple folders using loop
+      When to use: Iterate through list of directories to delete   
+   
+   i) find . -type d -empty -exec rmdir {} \;
+      Use: Find and remove all empty directories recursively
+      When to use: Clean up all empty folders in directory structure
+   
+   j) rmdir ~/.cache/empty_dir
+      Use: Remove directory from home directory using tilde
+      When to use: Clean up home directory subdirectories
+   
+   k) rmdir ./folder
+      Use: Remove directory using relative path with dot notation
+      When to use: Remove relative to current location
+   
 6. rm - Remove files
    Use Case: Delete files and directories
    Example: rm -r my_folder (recursive deletion)
